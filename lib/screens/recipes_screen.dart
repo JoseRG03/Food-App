@@ -1,4 +1,4 @@
-import 'package:demo_app/components/card2.dart';
+// import 'package:demo_app/components/card2.dart';
 import 'package:flutter/material.dart';
 
 class RecipesScreen extends StatelessWidget {
@@ -6,6 +6,6 @@ class RecipesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Card2();
-  }
+    return const Placeholder();
+  } //Card2();
 }

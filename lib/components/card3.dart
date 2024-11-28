@@ -1,8 +1,28 @@
 import 'package:demo_app/food_theme.dart';
 import 'package:flutter/material.dart';
 
+import '../models/explore_recipe.dart';
+
 class Card3 extends StatelessWidget {
-  const Card3({super.key});
+  const Card3({super.key, required this.recipe});
+
+  final ExploreRecipe recipe;
+
+  List<Widget> createTagChips() {
+    final chips = <Widget>[];
+
+    recipe.tags.take(6).forEach((value) {
+      final chip = Chip(
+        label: Text(value, style: FoodTheme.darkTextTheme.bodyLarge),
+        backgroundColor: Colors.black.withOpacity(0.7),
+        side: BorderSide(color: Colors.transparent),
+      );
+
+      chips.add(chip);
+    });
+
+    return chips;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,23 +66,7 @@ class Card3 extends StatelessWidget {
                 alignment: WrapAlignment.start,
                 spacing: 12,
                 runSpacing: 12,
-                children: [
-                  Chip(
-                    label: Text('Vegan', style: FoodTheme.darkTextTheme.bodyLarge),
-                    backgroundColor: Colors.black.withOpacity(0.7),
-                    side: BorderSide(color: Colors.transparent),
-                  ),
-                  Chip(
-                    label: Text('Carrots', style: FoodTheme.darkTextTheme.bodyLarge),
-                    backgroundColor: Colors.black.withOpacity(0.7),
-                    side: BorderSide(color: Colors.transparent),
-                  ),
-                  Chip(
-                    label: Text('Orange', style: FoodTheme.darkTextTheme.bodyLarge),
-                    backgroundColor: Colors.black.withOpacity(0.7),
-                    side: BorderSide(color: Colors.transparent),
-                  ),
-                ],
+                children: createTagChips(),
               ),
             ),
           ],

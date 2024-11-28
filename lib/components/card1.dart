@@ -1,50 +1,51 @@
 import 'package:demo_app/food_theme.dart';
 import 'package:flutter/material.dart';
 
-class Card1 extends StatelessWidget {
-  const Card1({super.key});
+import '../models/explore_recipe.dart';
 
-  final String category = "Editor\'s Choice";
-  final String title = 'Art of Dough';
-  final String description = 'Learn to make the perfect bread';
-  final String chef = 'Ray Wender';
+class Card1 extends StatelessWidget {
+  const Card1({super.key, required this.recipe});
+
+  final ExploreRecipe recipe;
+
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Container(
+        padding: EdgeInsets.all(10),
         constraints: BoxConstraints.expand(
           width: 350,
           height: 350,
         ),
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage('assets/magazine_pics/mag1.png'),
+                  image: AssetImage(recipe.backgroundImage),
               fit: BoxFit.cover
               ),
             borderRadius: BorderRadius.circular(10),
           ),
         child: Stack(
           children: [
-            Text(category, style: FoodTheme.darkTextTheme.bodyLarge),
+            Text(recipe.subtitle, style: FoodTheme.darkTextTheme.bodyLarge),
             Positioned(
               top: 20,
               child: Text(
-                  title,
+                  recipe.title,
                   style: FoodTheme.darkTextTheme.titleLarge
               )),
             Positioned(
               bottom: 30,
               right: 0,
               child: Text(
-                  description,
+                  recipe.description,
                   style: FoodTheme.darkTextTheme.bodyLarge
               )),
             Positioned(
                 bottom: 10,
                 right: 0,
                 child: Text(
-                  chef,
+                  recipe.authorName,
                   style: FoodTheme.darkTextTheme.bodyLarge
               )),
           ],

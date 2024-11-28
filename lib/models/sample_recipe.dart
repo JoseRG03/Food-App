@@ -1,6 +1,6 @@
 part of 'explore_recipe.dart';
 
-class Post {
+class SimpleRecipe {
   final String id;
   final String dishImage;
   final String title;
@@ -8,7 +8,7 @@ class Post {
   final String source;
   final List<String> information;
 
-  Post({
+  SimpleRecipe({
     required this.id,
     required this.dishImage,
     required this.title,
@@ -17,7 +17,7 @@ class Post {
     required this.information,
   });
 
-  factory Post.fromJson(Map<String, dynamic> json) => Post(
+  factory SimpleRecipe.fromJson(Map<String, dynamic> json) => SimpleRecipe(
     id: json["id"],
     dishImage: json["dishImage"],
     title: json["title"],

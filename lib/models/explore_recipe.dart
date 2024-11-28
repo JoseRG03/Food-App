@@ -1,5 +1,6 @@
 part 'ingredient.dart';
 part 'instruction.dart';
+part 'sample_recipe.dart';
 
 class ExploreRecipe {
   final String id;
