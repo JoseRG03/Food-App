@@ -56,14 +56,14 @@ class RecipeThumbnail extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Theme.of(context).scaffoldBackgroundColor,
           borderRadius: BorderRadius.circular(12),
           boxShadow: [
           BoxShadow(
-              color: Colors.grey,
-              offset: Offset(5.0, 5.0),
-              blurRadius: 10.0,
-              spreadRadius: 2.0)
+              color: Theme.of(context).appBarTheme.foregroundColor ?? Colors.black,
+              offset: Offset(2.5, 2.5),
+              blurRadius: 7.0,
+              spreadRadius: 3.0)
         ]),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
