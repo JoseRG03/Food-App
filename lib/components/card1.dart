@@ -26,7 +26,7 @@ class Card1 extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),
         child: Stack(
-          children: [
+            children: [
             Text(recipe.subtitle, style: FoodTheme.darkTextTheme.bodyLarge),
             Positioned(
               top: 20,

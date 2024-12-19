@@ -63,7 +63,7 @@
                 {
                     "imageUrl": "food_peanutbutter.png",
                     "title": "Peanut Butter",
-                    "source": "https://pixabay.com/photos/almond-blue-cook-cooking-egg-fat-1850615/" 
+                    "source": "https://pixabay.com/photos/almond-blue-cook-cooking-egg-fat-1850615/"
                 },
                 {
                     "imageUrl": "food_soymilk.png",
@@ -77,17 +77,17 @@
                 }
             ],
             "instructions": [
-                {   
+                {
                     "imageUrl": "food_banana.jpg",
                     "description": "Peel the banana, cut it in half and place it in the blender.",
                     "durationInMinutes": 1
                 },
-                {   
+                {
                     "imageUrl": "",
                     "description": "Add two big scoops of peanut butter.",
                     "durationInMinutes": 1
                 },
-                {   
+                {
                     "imageUrl": "",
                     "description": "Add 2 cups of almond milk. Depending on the portion you may want to add more milk. You can add any type of milk you want.",
                     "durationInMinutes": 5
@@ -115,7 +115,7 @@
                 {
                     "imageUrl": "food_cucumber.jpg",
                     "title": "Cucumber",
-                    "source": "https://pixabay.com/photos/cucumbers-vegetables-green-healthy-849269/" 
+                    "source": "https://pixabay.com/photos/cucumbers-vegetables-green-healthy-849269/"
                 },
                 {
                     "imageUrl": "food_green_beans.jpg",
@@ -129,22 +129,22 @@
                 }
             ],
             "instructions": [
-                {   
+                {
                     "imageUrl": "food_cucumber.jpg",
                     "description": "Cut the cucumber up into many pieces.",
                     "durationInMinutes": 3
                 },
-                {   
+                {
                     "imageUrl": "",
                     "description": "Wash the green beans well with salt, and rinse it a couple of times.",
                     "durationInMinutes": 2
                 },
-                {   
+                {
                     "imageUrl": "",
                     "description": "Peel the first layer of brussel sprout leaves and place them in a bowl of water. Make sure you add salt to kill the germs.",
                     "durationInMinutes": 5
                 },
-                {   
+                {
                     "imageUrl": "",
                     "description": "Place everything in a clean bowl, and add some salad dressing of your choice.",
                     "durationInMinutes": 5

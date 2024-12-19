@@ -12,12 +12,12 @@ class ApiService {
     return rootBundle.loadString(path);
   }
 
-  Future<List<SimpleRecipe>> _getRecipes() async {
+  Future<List<SimpleRecipe>> getRecipes() async {
 
     await Future.delayed(const Duration(milliseconds: 1000));
 
     //Se trae el json desde nuestro archivo
-    final data = await _loadAssets('assets/sample_data/simple_recipes.json');
+    final data = await _loadAssets('assets/sample_data/sample_recipes.json');
 
     //Se convierte el json a un mapa
     final Map<String, dynamic> json = jsonDecode(data);
@@ -29,6 +29,7 @@ class ApiService {
         recipes.add(SimpleRecipe.fromJson(value));
       });
 
+      print(recipes);
       return recipes; //Devolvemos la lista de objetos SimpleRecipes
     }
 
@@ -61,9 +62,12 @@ class ApiService {
 
     final Map<String, dynamic> json = jsonDecode(data);
 
-    if (json['feed'] != null) {
+
+    if (json['recipes'] != null) {
+
       final exploreRecipes = <ExploreRecipe>[];
-      json['feed'].forEach((value){
+
+      json['recipes'].forEach((value){
         exploreRecipes.add(ExploreRecipe.fromJson(value));
       });
 
@@ -73,9 +77,12 @@ class ApiService {
     return [];
   }
 
-  Future <ExploreData> _getExploreData() async {
+  Future <ExploreData> getExploreData() async {
     final todayRecipes = await _getTodayRecipes();
     final friendPosts = await _getFriendPosts();
+
+
+    print("Picha mal ride");
 
     return ExploreData(todayRecipes, friendPosts);
   }
